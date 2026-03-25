@@ -3,6 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content')
+  <div class="app-content-header">
+            <div class="container-fluid">
+                <h3>@yield('title', 'Dashboard')</h3>
+            </div>
+        </div>
 <div class="row">
     <div class="col-lg-3 col-6">
         <div class="small-box text-bg-primary">
@@ -215,7 +220,7 @@
                           <span class="direct-chat-timestamp float-end"> 23 Jan 5:37 pm </span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img
+                       <img
     class="direct-chat-img"
     src="{{ asset('dist/assets/img/user1-128x128.jpg') }}"
     alt="message user image"

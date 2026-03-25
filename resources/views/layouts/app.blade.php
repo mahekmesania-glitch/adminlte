@@ -33,11 +33,11 @@
 
     {{-- CONTENT --}}
     <main class="app-main">
-        <div class="app-content-header">
+        <!-- <div class="app-content-header">
             <div class="container-fluid">
                 <h3>@yield('title', 'Dashboard')</h3>
             </div>
-        </div>
+        </div> -->
 
         <div class="app-content">
             <div class="container-fluid">
