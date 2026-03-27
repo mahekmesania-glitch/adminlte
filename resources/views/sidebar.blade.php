@@ -45,6 +45,32 @@
                   </li>
                 </ul>
               </li>
+              
+              <li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon bi bi-box-seam-fill"></i>
+        <p>
+            Products
+            <i class="nav-arrow bi bi-chevron-right"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview ms-3">
+        <li class="nav-item">
+            <a href="{{ route('products.create') }}" class="nav-link">
+                <i class="bi bi-plus-circle nav-icon"></i>
+                <p>Add Product</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('products.index') }}" class="nav-link">
+                <i class="bi bi-card-list nav-icon"></i>
+                <p>View Products</p>
+            </a>
+        </li>
+    </ul>
+</li>
+
+              
               <li class="nav-item">
     <a href="{{ route('generate.theme') }}" class="nav-link">
         <i class="nav-icon bi bi-palette"></i>

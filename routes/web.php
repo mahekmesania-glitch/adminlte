@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PassportController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 
 /* Route::get('/', function () {
     return view('welcome');
@@ -162,6 +166,37 @@ Route::get('/docs/javascript.treeview', function () {
 Route::get('/docs/browser-support', function () {
     return view('docs.browser-support');
 })->name('docs.browser-support'); 
+
+
+
+
+
+
+// Show all products
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+// Show form to create a new product
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+
+// Save new product and attach categories
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
+
+
+Route::get('/people/{person}/passport', [PassportController::class, 'create'])->name('passports.create');
+Route::post('/people/{person}/passport', [PassportController::class, 'store'])->name('passports.store');
+
+
+
+Route::get('/students', [StudentController::class, 'index']);
+
+
+
+Route::get('/teachers', [TeacherController::class, 'index']);
+
+
+// New route for courses (many-to-many)
+Route::get('/students-courses', [StudentController::class, 'coursesIndex']);
 
 
 
